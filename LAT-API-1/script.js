@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     let data = result.data
 
     let teks = '<ul class="population">'
-    data.forEach(item => {
+    data.forEach(element => {
         teks += `<li>`
-        teks += `<h3>${item.Nation} (${item.Year})</h3>`
-        teks += `<p>Population: ${item.Population.toLocaleString()}</p>`
+        teks += `<h3>${element.Nation} (${element.Year})</h3>`
+        teks += `<p>Population: ${element.Population.toLocaleString()}</p>`
         teks += `</li>`
     })
     teks += '</ul>'
