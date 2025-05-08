@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     let result = await hitAPI(url)
     let data = result.data
 
-    let teks = '<ul class="population">'
+    let text = '<ul class="population">'
     data.forEach(element => {
-        teks += `<li>`
-        teks += `<h3>${element.Nation} (${element.Year})</h3>`
-        teks += `<p>Population: ${element.Population.toLocaleString()}</p>`
-        teks += `</li>`
+        text += `<li>`
+        text += `<h3>${element.Nation} (${element.Year})</h3>`
+        text += `<p>Population: ${element.Population.toLocaleString()}</p>`
+        text += `</li>`
     })
-    teks += '</ul>'
+    text += '</ul>'
 
-    content.innerHTML = teks
+    content.innerHTML = text
 })
